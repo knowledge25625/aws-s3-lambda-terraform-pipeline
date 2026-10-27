@@ -1,0 +1,10 @@
+# Local Terraform directories and files
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+*.tfvars
+*.user.tfvars
+
+# Compiled/zipped python artifacts
+lambda_function.zip
