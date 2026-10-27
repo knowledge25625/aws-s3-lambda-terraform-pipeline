@@ -1,22 +1,22 @@
 # Serverless Event-Driven AWS Pipeline (S3 + Lambda + DynamoDB) via Terraform
 
-## 🚀 Project Overview
+## Project Overview
 This project demonstrates a production-grade, serverless event-driven architecture built entirely using **Terraform (Infrastructure as Code)**. 
 
 When a user uploads a file to an **Amazon S3** bucket, an automated event trigger instantly executes an **AWS Lambda** function written in Python. The function parses the upload metadata and securely writes a log entry into an **Amazon DynamoDB** table.
 
 ---
 
-## 🏗️ Architecture Flow
-1. **Storage Layer:** User uploads an object to `s3-awsproject-1`.
-2. **Event Trigger:** S3 fires an `ObjectCreated` event notification.
-3. **Compute Layer:** The event invokes an **AWS Lambda** function (`S3EventProcessor`).
+## Architecture Flow
+1. **Storage Layer:** User uploads an object to s3-awsproject-1.
+2. **Event Trigger:** S3 fires an ObjectCreated event notification.
+3. **Compute Layer:** The event invokes an **AWS Lambda** function (S3EventProcessor).
 4. **Security & IAM:** The Lambda function operates under a least-privilege IAM execution role attached with basic CloudWatch logging and DynamoDB write permissions.
-5. **Database Layer:** Metadata (`FileId`, `BucketName`, `FileName`, `FileSize`) is permanently recorded in **Amazon DynamoDB** (`S3MetadataTable`).
+5. **Database Layer:** Metadata (FileId, BucketName, FileName, FileSize) is permanently recorded in **Amazon DynamoDB** (S3MetadataTable).
 
 ---
 
-## 🛠️ Tech Stack Used
+## Tech Stack Used
 * **Cloud Provider:** Amazon Web Services (AWS)
 * **Infrastructure as Code:** Terraform
 * **Compute:** AWS Lambda (Python 3.11)
@@ -47,7 +47,7 @@ Cleared the staging cache and purged the heavy files out of Git history using re
 Performed a clean commit and force-pushed only the lightweight infrastructure source code.
 ---
 
-## 📂 Repository Structure
+## Repository Structure
 ```text
 s3-lambda-pipeline/
 │
@@ -55,3 +55,6 @@ s3-lambda-pipeline/
 ├── provider.tf          # AWS Provider & Terraform configuration
 ├── lambda_function.py   # Python backend logic for processing S3 events
 └── .gitignore           # Excludes local state files, binaries, and zips
+
+##Repository Close
+git clone [https://github.com/Knowledge25625/aws-s3-lambda-terraform-pipeline.git](https://github.com/Knowledge25625/aws-s3-lambda-terraform-pipeline.git)
