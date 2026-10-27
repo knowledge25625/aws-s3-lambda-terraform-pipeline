@@ -46,6 +46,7 @@ Cleared the staging cache and purged the heavy files out of Git history using re
 
 Performed a clean commit and force-pushed only the lightweight infrastructure source code.
 ---
+<img width="1902" height="960" alt="S3 metadate populated" src="https://github.com/user-attachments/assets/7a6d15a3-8839-4e09-ae38-7a027e466073" />
 
 ## Repository Structure
 ```text
@@ -55,8 +56,6 @@ s3-lambda-pipeline/
 ├── provider.tf          # AWS Provider & Terraform configuration
 ├── lambda_function.py   # Python backend logic for processing S3 events
 └── .gitignore           # Excludes local state files, binaries, and zips
-<img width="1902" height="960" alt="S3 metadate populated" src="https://github.com/user-attachments/assets/bea3823d-5965-491f-bfc9-d01d0b523e11" />
-
 
 ##Repository Close
 git clone [https://github.com/Knowledge25625/aws-s3-lambda-terraform-pipeline.git](https://github.com/Knowledge25625/aws-s3-lambda-terraform-pipeline.git)
